@@ -1,0 +1,17 @@
+package ihm_Swing;
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
+
+
+public class DemoFenetre1 implements WindowConstants {
+	public static void main(String[] args) {
+		JFrame maFenetre = new JFrame();
+		maFenetre.setVisible(true);
+		maFenetre.setSize(300,300);
+		maFenetre.setTitle("Zak App"); 
+		maFenetre.setLocationRelativeTo(null);
+		//exits
+		maFenetre.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+}

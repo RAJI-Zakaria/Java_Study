@@ -32,7 +32,6 @@ try {
 			f1.ouvertureEcriture();
 			
 			//ecrtiture
-
 			f1.ecrireObjet(p.length);
 
 			for(int i=0;i<p.length;i++) {

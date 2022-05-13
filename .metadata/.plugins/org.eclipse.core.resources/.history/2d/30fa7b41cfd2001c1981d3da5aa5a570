@@ -1,0 +1,7 @@
+package ihm_Swing;
+import javax.swing.JFrame;
+
+
+public class DemoFenetre1 {
+
+}

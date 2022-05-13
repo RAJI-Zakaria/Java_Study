@@ -1,0 +1,14 @@
+package ihm_Swing;
+import javax.swing.JFrame;
+
+
+public class DemoFenetre1 {
+	public static void main(String[] args) {
+		JFrame maFenetre = new JFrame();
+		maFenetre.setVisible(true);
+		maFenetre.setSize(300,300);
+		maFenetre.setTitle("Zak App"); 
+		maFenetre.setLocationRelativeTo(null);
+	}
+
+}

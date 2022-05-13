@@ -1,0 +1,54 @@
+package ihm_Swing;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.WindowConstants;
+
+
+public class DemoFenetre1 implements WindowConstants {
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		JFrame maFenetre = new JFrame();  
+		
+		maFenetre.setVisible(true);
+		maFenetre.setSize(2400,2500);
+		maFenetre.setTitle("Profil"); 
+		maFenetre.setLocationRelativeTo(null);
+		//exit --> mettre fin a son execution
+		maFenetre.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		maFenetre.setLayout(null);
+		maFenetre.setResizable(false);
+		
+		
+		
+
+		//widgets 
+		//-----------------________----_>
+		//label
+		JLabel labeblPseudo = new JLabel("Pseudo : ");
+		labeblPseudo.setLocation(10, 10);
+		labeblPseudo.setSize(50, 20);
+		maFenetre.add(labeblPseudo);
+		
+		
+		
+		
+		
+		//adding combo box
+		String[] qualities = {"Force", "Patience", "Rapidite", "Ruse"};
+		JComboBox<String> comboQualites = new JComboBox<String>(qualities); 
+		comboQualites.setLocation(20, 10);
+		maFenetre.setBounds(30, 30,190,20);  
+		
+		maFenetre.add(comboQualites);
+		
+		
+		
+		
+	}
+
+}
