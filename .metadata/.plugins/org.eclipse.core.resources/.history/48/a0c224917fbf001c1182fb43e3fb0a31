@@ -1,0 +1,129 @@
+package Project;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Tache {
+	private String titre;
+	private String description;
+	private LocalDate dateDeb;
+	private LocalDate datefin;
+	private int niveauPriorite;
+	
+
+
+	private ArrayList<Tache> preRequis;
+	private ArrayList<Tache> sousTaches;
+
+	
+	public Tache(String titre, String description, LocalDate dateDeb, LocalDate datefin, int niveauPriorite) {
+		//setting the properties
+		this.titre = titre;
+		this.description = description;
+		this.dateDeb = dateDeb;
+		this.datefin = datefin;
+		this.niveauPriorite = niveauPriorite;
+		//initializing the lists ==> empty list
+		this.preRequis = new ArrayList<Tache>();
+		this.sousTaches = new ArrayList<Tache>();
+	}
+	//overloading the constructor
+	public Tache(String titre, String description, LocalDate dateDeb, LocalDate datefin, int niveauPriorite, ArrayList<Tache> preRequis, ArrayList<Tache> sousTaches) {
+		//calling the other construction to set the other elements
+		this(titre, description, dateDeb, datefin, niveauPriorite);
+		//setting up the lists 
+		this.preRequis = preRequis;
+		this.sousTaches = sousTaches;
+	}
+
+	//don't need it for the moment
+//	public Tache() {
+//		// TODO Auto-generated constructor stub
+//	}
+
+	public String getTitre() {
+		return titre;
+	}
+
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	} 
+	
+	public LocalDate getDateDeb() {
+		return dateDeb;
+	}
+
+	public void setDateDeb(LocalDate dateDeb) {
+		this.dateDeb = dateDeb;
+	}
+
+	public LocalDate getDatefin() {
+		return datefin;
+	}
+
+	public void setDatefin(LocalDate datefin) {
+		this.datefin = datefin;
+	}
+
+	public int getNiveauPriorite() {
+		return niveauPriorite;
+	}
+
+	public void setNiveauPriorite(int niveauPriorite) {
+		this.niveauPriorite = niveauPriorite;
+	}
+
+	public ArrayList<Tache> getPreRequis() {
+		return preRequis;
+	}
+
+	public void setPreRequis(ArrayList<Tache> preRequis) {
+		this.preRequis = preRequis;
+	}
+
+	public ArrayList<Tache> getSousTaches() {
+		return sousTaches;
+	}
+
+	public void setSousTaches(ArrayList<Tache> sousTaches) {
+		this.sousTaches = sousTaches;
+	}
+	
+	
+	//CRUD simple functions
+	
+	public void addPreRequis(Tache preRequis) {
+		this.preRequis.add(preRequis);
+	}
+	
+	public void deletePreRequis(Tache preRequis) {
+		int preRequisIndex = this.preRequis.indexOf(preRequis);
+		this.preRequis.remove(preRequisIndex);
+	}
+	
+	public void modifyPreRequis(Tache preRequis) {
+		int preRequisIndex = this.preRequis.indexOf(preRequis);
+		this.preRequis.set(preRequisIndex, preRequis);
+	}
+	
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return titre, description, dateDeb, datefin, niveauPriorite;
+	}
+
+	
+	
+	
+	
+
+}

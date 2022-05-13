@@ -1,0 +1,33 @@
+package Project;
+
+import java.time.LocalDate;
+
+public class main {
+
+	public static void main(String[] args) { 
+		//creating new client
+		Client client1 = new Client("raji", "zakaria", LocalDate.of(1998, 03, 10));
+		//creating new employee
+		Employe employee1 = new Employe("Jean", "valjean", LocalDate.of(1950, 02, 20));
+		
+		//creating new project
+		//we can initialize the project with tasks using 3 params or we can add tasks after creating project
+		Projet  project1 = new Projet(client1, employee1);
+		
+		//creating new tasks before inserting them to the project1
+		Tache tache1 = new Tache("analyzing data", "using AI and plot lib python", LocalDate.of(2022, 04, 19), LocalDate.of(2022, 04, 20), 1);
+		Tache tache2 = new Tache("creating new mockup & design for the app", "using adobe XD and Illustrator", LocalDate.of(2022, 04, 21), LocalDate.of(2022, 04, 23), 1);
+		
+		//current date is 19/04/2022
+		//creating a delayed task ==> end date is less than the current date
+
+		Tache tache3 = new Tache("analyzing data", "using AI and plot lib python", LocalDate.of(2022, 04, 19), LocalDate.of(2022, 04, 20), 1);
+		//attach task to project
+		project1.addTache(tache1);
+		project1.addTache(tache2);
+		
+		
+		
+	}
+
+}

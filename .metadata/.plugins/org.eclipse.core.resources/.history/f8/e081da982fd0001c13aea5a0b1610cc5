@@ -1,0 +1,13 @@
+package tp_input_output;
+
+public class Main {
+
+	public static void main(String[] args) {
+		InputOutput io = new InputOutput();
+		
+		int val;
+		
+		val = io.saisie();
+	}
+
+}

@@ -1,0 +1,13 @@
+package tp_exception;
+
+public class MonException extends Exception
+{	
+	public MonException()
+	{
+        System.out.println("Aucun argument");
+    }
+
+    public String toString(){
+          return "MonException : le nombre d'arguments est nul";
+    }
+}

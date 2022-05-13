@@ -1,0 +1,32 @@
+package tp_input_output;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Saisie {
+	static int saisie() throws InputMismatchException{
+		
+      return saisieCorrecte();
+    	  
+	}
+	 public static int saisieCorrecte() {
+		 while(true) {
+			 try {
+	    		   int a=0;
+	           	Scanner scanner = new Scanner( System.in );
+	           	
+	           	System.out.println( "Veuillez saisir un premier entier : " );
+	                a = scanner.nextInt();
+	                
+	                //return and quite the while loop
+	                return a;
+	           	
+	           }catch(InputMismatchException e) {
+	           	System.err.println("Ce n'est pas un entier");
+	           } 
+		 }
+	 }
+	
+	 
+	
+}

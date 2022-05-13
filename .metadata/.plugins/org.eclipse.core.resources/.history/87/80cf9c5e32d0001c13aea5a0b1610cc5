@@ -1,0 +1,13 @@
+package tp_input_output;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int val = Saisie.saisie();
+		
+		List<Integer> lst = Saisie.saisieListe();
+		System.out.println("valeur : "+val);
+	}
+
+}

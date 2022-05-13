@@ -1,0 +1,15 @@
+package Project;
+
+import java.time.LocalDate;
+
+public class main {
+
+	public static void main(String[] args) { 
+		//creating new client
+		Client c1 = new Client("raji", "zakaria", LocalDate.of(1998, 03, 10));
+		
+		
+		Projet  p1 = new Projet();
+	}
+
+}

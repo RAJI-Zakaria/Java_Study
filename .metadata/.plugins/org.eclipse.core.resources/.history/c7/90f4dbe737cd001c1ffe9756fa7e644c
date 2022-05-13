@@ -1,0 +1,8 @@
+package figures_tp;
+
+public class Carre extends Rectangle{
+
+	public Carre(int c) {
+		super(c,c);
+	}
+}

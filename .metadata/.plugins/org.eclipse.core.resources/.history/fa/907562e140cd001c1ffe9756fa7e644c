@@ -1,0 +1,16 @@
+package TP3_Exception;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String[] notes = new String[] {"12","14","tata","1","toto"};
+		
+		double somme = Notes.moyenne(notes);
+		
+		System.out.println("la somme est : " + somme);
+	}
+	
+	
+
+}

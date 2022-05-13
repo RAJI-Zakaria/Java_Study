@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;Project.Tache.finished&apos; in &apos;Project.Tache&apos;&#x0A;- Original project: &apos;Projet&apos;&#x0A;- Original element: &apos;Project.Tache.finished&apos;&#x0A;- Getter method name: &apos;isFinished&apos;&#x0A;- Setter method name: &apos;setFinished&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;finished&apos;" flags="589830" getter="isFinished" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;Project{Tache.java[Tache^finished" insertion="22" setter="setFinished" stamp="1650437119784" version="1.0" visibility="1"/>
+</session>

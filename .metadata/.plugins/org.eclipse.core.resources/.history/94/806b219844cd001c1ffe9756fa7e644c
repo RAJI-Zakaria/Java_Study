@@ -1,0 +1,5 @@
+package TP3_Exception;
+
+public class MonExceptions extends Exception {
+
+}

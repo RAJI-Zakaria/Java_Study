@@ -1,0 +1,23 @@
+package TP3_Exception;
+
+public class Notes {
+	//int[] i = new int[] {12,14,3,16,11,20,18};
+	
+
+	public static double moyenne(String[] valeurs) {
+		try {
+			double res = 0;
+			int lgt = valeurs.length;
+			for(int i=0;i<valeurs.length;i++) {
+				res = res + Double.parseDouble(valeurs[i]);
+			}
+			res = res/lgt;
+			return res;
+		}catch(Exception e ) {
+			System.out.println("error from " + e.getMessage());
+			
+		}
+	}
+	
+	 
+}

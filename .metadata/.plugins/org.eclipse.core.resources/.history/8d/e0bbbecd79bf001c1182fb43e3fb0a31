@@ -1,0 +1,14 @@
+package Project;
+
+import java.util.ArrayList;
+
+public class Projet {
+	private Client G_Client;
+	private Employe Employe;
+	private ArrayList<Tache> taches;
+
+	public Projet() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

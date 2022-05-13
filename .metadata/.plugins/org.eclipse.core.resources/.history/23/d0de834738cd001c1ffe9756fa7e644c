@@ -1,0 +1,14 @@
+package figures_tp;
+
+public class Carre extends Rectangle{
+
+	public Carre() {
+		super();
+	}
+	public Carre(int c) {
+		super(c,c);
+	}
+	public double cote(){
+		return super.perimetre() +  super.largeur();
+	}
+}

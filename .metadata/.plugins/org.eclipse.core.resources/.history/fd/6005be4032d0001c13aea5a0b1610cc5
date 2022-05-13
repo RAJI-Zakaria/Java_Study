@@ -1,0 +1,68 @@
+package tp_input_output;
+
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
+
+import TP3_Exception.MonExceptions;
+import tp_exception.MonExceptionGolb;
+
+public class Saisie {
+	static int saisie() throws InputMismatchException{
+		
+      return saisieCorrecte();
+    	  
+	}
+	 public static int saisieCorrecte() {
+		 while(true) {
+			 try {
+	    		   int a=0;
+	           	Scanner scanner = new Scanner( System.in );
+	           	
+	           	System.out.println( "Veuillez saisir un premier entier : " );
+	                a = scanner.nextInt();
+	                
+	                //return and quite the while loop
+	                return a;
+	           	
+	           }catch(InputMismatchException e) {
+	           	System.err.println("Ce n'est pas un entier.");
+	           } 
+		 }
+	 }
+	 
+	 private static List<Integer> saisieListe() 
+	 {
+		 List<Integer> lst = new ArrayList<Integer>();
+		 int val;
+		 while(true) { 
+				val = saisieCorrecte();
+				if(val==-1)
+					return lst;
+				lst.add(val);
+		 }
+	 }
+	 public static double moyenne(String[] valeurs) throws NumberFormatException{
+			if(valeurs.length==0) {
+				throw new NumberFormatException();
+			}
+			double res = 0;
+				
+				int lgt = valeurs.length;
+				for(int i=0;i<valeurs.length;i++) {
+					try {
+						res = res + Double.parseDouble(valeurs[i]);
+					}catch(NumberFormatException e ) {
+						System.out.println("error from '" + valeurs[i] +"' is not a double");
+						
+					}
+				}
+				res = res/lgt;
+			
+			return res;
+		}
+	
+	 
+	
+}

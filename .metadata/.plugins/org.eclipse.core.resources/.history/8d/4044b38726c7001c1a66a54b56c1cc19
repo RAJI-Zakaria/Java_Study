@@ -1,0 +1,63 @@
+package Project;
+
+import java.time.LocalDate;
+
+public class main {
+
+	public static void main(String[] args) {
+		//creating new client
+		Client client1 = new Client("raji", "zakaria", LocalDate.of(1998, 03, 10));
+		//creating new employee
+		Employe employee1 = new Employe("Jean", "valjean", LocalDate.of(1950, 02, 20));
+		Employe employee2 = new Employe("will", "smith", LocalDate.of(1960, 11, 03));
+		Employe employee3 = new Employe("van", "dam", LocalDate.of(1940, 10, 05));
+		Employe employee4 = new Employe("Jack", "man", LocalDate.of(1980, 01, 05));
+		
+		//creating new project
+		//we can initialize the project with tasks using 3 params or we can add tasks after creating project
+		Projet  project1 = new Projet(client1, employee1);
+		
+		//creating new tasks before inserting them to the project1
+		//priority 40
+		Tache tache1 = new Tache("task 1 : analyzing data", "using AI and plot lib python", LocalDate.of(2022, 04, 19), LocalDate.of(2022, 04, 20), 40, employee2);
+		//prio 1
+		Tache tache2 = new Tache("task 2 : creating new mockup & design for the app", "using adobe XD and Illustrator", LocalDate.of(2022, 04, 21), LocalDate.of(2022, 04, 23), 1, employee3);
+		
+		//current date is 19/04/2022
+		//creating a delayed task ==> end date is less than the current date
+		//priority 5
+		Tache tache3 = new Tache("task 3 : Talking to the client", "Pro communication, collect data",  LocalDate.of(2022, 04, 17), LocalDate.of(2022, 04, 18), 5, employee2);
+		//priority 2
+		Tache tache4 = new Tache("task 4 : Selecting Team member", "contacting them using phone",  LocalDate.of(2022, 04, 17), LocalDate.of(2022, 04, 18), 2, employee4);
+
+		Tache tache5 = new Tache("Task 5", "",  LocalDate.of(2022, 04, 17), LocalDate.of(2022, 04, 18), 7, employee2);
+		Tache tache6 = new Tache("Task 6", "",  LocalDate.of(2022, 04, 17), LocalDate.of(2022, 04, 18), 1, employee4);
+		Tache tache7 = new Tache("Task 7", "",  LocalDate.of(2022, 04, 17), LocalDate.of(2022, 04, 18), 4, employee2);
+		Tache tache8 = new Tache("Task 8", "",  LocalDate.of(2022, 04, 17), LocalDate.of(2022, 04, 18), 5, employee4);
+		Tache tache9 = new Tache("Task 9", "",  LocalDate.of(2022, 04, 17), LocalDate.of(2022, 04, 18), 3, employee2);
+		Tache tache10 = new Tache("Task 10", "",  LocalDate.of(2022, 04, 17), LocalDate.of(2022, 04, 18), 12, employee4);
+		Tache tache11 = new Tache("Task 11", "",  LocalDate.of(2022, 04, 17), LocalDate.of(2022, 04, 18), 5, employee2);
+		Tache tache12 = new Tache("Task 12", "",  LocalDate.of(2022, 04, 17), LocalDate.of(2022, 04, 18), 1, employee4);
+		
+		//attaching tasks to task1
+		tache1.addPreRequis(tache2);
+		tache1.addPreRequis(tache3);
+		tache1.addPreRequis(tache4);
+		tache1.addPreRequis(tache5); 
+		
+		
+		
+		//attach task to project
+		project1.addTache(tache1);
+		
+		tache1.displayPreRequis();
+		
+		//tache1.executePreRequisTache();
+		
+		//project1.afficheTaches(project1.tacheRetard());
+		
+		
+		
+	}
+
+}
