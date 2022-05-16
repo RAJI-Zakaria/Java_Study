@@ -1,4 +1,5 @@
 package ihm_Swing;
+import javax.swing.*;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -15,13 +16,13 @@ public class DemoFenetre1 implements WindowConstants {
 		
 		JFrame maFenetre = new JFrame();  
 		
-		maFenetre.setSize(2400,2500);
+		maFenetre.setSize(240,250);
 		maFenetre.setTitle("Profil"); 
 		maFenetre.setLocationRelativeTo(null);
 		//exit --> mettre fin a son execution
 		maFenetre.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		maFenetre.setLayout(null);
-		//maFenetre.setResizable(false);
+		maFenetre.setResizable(false);
 		
 		
 		
@@ -50,6 +51,10 @@ public class DemoFenetre1 implements WindowConstants {
 				labelCombo.setLocation(10, 40);
 				labelCombo.setSize(120, 30);
 				maFenetre.add(labelCombo);
+		
+		 
+		 
+  
 
 				
 		//adding combo box
@@ -60,7 +65,13 @@ public class DemoFenetre1 implements WindowConstants {
 		comboQualites.setBounds(130, 42,190,20);
 		
 		maFenetre.add(comboQualites);
+		
+        JCheckBox checkBox1 = new JCheckBox("Niveau expert");  
 
+        checkBox1.setBounds(130, 62,190,20);
+
+		maFenetre.add(checkBox1);
+		
 		maFenetre.setVisible(true);
 		
 		

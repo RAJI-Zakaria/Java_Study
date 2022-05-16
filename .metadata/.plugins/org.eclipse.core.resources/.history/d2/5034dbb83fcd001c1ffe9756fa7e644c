@@ -1,5 +1,0 @@
-package TP3_Exception;
-
-public class Notes {
-	int[] i = new int[] {12,14,3,16,11,20,18};
-}
